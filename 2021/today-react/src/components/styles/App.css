@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #282c34;
+  height: 100%;
+  min-height: 100vh;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 5vmin;
+  pointer-events: none;
+}
+
+.clock {
+  height: 200px;
+  width: 800px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 4em;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@media all and (max-width: 765px){
+  .App-logo {
+    height: 10vmin;
+  }
+  .clock {
+    width: 100%;
+    font-size: 2em;
+    height: 100px;
+  }
+}

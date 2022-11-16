@@ -1,0 +1,106 @@
+body {
+    background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+min-width: 100%;
+min-height: 100%;
+width:100%;
+height: 100vh;
+overflow: hidden;
+}
+.button-arrow {
+    z-index: inherit;
+}
+.circles {
+background-image: url('../images/circles.png');
+background-repeat: round;
+}
+.bottom-arrow:after {
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    z-index: -99;
+    border-top: 325px solid #343a40;
+    border-left: 325px solid transparent;
+    border-right: 325px solid transparent;
+}
+
+
+.border-ahora {
+    border-color: #11998e;
+}
+.input-group-text{
+    background: #11998e;
+    color:white;
+    border-color: #11998e;
+}
+
+@media (max-width:600px) {
+    .bottom-arrow:after {
+        content:'';
+        position: absolute;
+        left: -0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        z-index: -99;
+        border-top: 225px solid #343a40;
+        border-left: 225px solid transparent;
+        border-right: 225px solid transparent;
+    }
+    .ahoracambio {
+        font-size:2em;
+    }
+    .img {
+        width:30%;
+    }
+}
+
+@media (max-width:500px) {
+    .bottom-arrow:after {
+        content:'';
+        position: absolute;
+        left: -0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        z-index: -99;
+        border-top: 225px solid #343a40;
+        border-left: 225px solid transparent;
+        border-right: 225px solid transparent;
+    }
+    .ahoracambio {
+        font-size:2em;
+    }
+    .img {
+        width:30%;
+    }
+}
+
+@media (max-width:400px) {
+    .bottom-arrow:after {
+        content:'';
+        position: absolute;
+        left: -1%;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        z-index: -99;
+        border-top: 125px solid #343a40;
+        border-left: 125px solid transparent;
+        border-right: 125px solid transparent;
+    }
+    .ahoracambio {
+        display: none;
+    }
+    .img {
+        width:30%;
+    }
+}
