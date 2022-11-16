@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DV Notes - Optimizá tu tiempo</title>
+    <link rel="stylesheet" id="tema" href="css/DVCut-A.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/jquery-confirm.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body id="body-theme">
+        
+    <nav data-role="panel" data-theme="a" id="menu-notes" data-display="overlay" data-position="left">
+           <div class="logo">
+               <p class="dvn-menu">DVNotes</p>
+           </div>
+            <ul data-role="listview" id="menu-notes-list">
+           <li class="close-t"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-right ui-btn-inline ui-mini">Cerrar Menu</a></li> 
+            <li><a href="#index">Inicio</a></li>
+            <li><a href="#notas">Notas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="close-tt"><a class="ui-btn">Opciónes de Tema</a></li>
+            <li><a class="tema-plug ui-btn">Modo Oscuro</a></li>
+        </ul>
+    </nav>
+    
+    <section id="index" data-role="page" >
+       <header data-role="header" id="header">
+          <a id="refresh" class="ui-btn-left" data-role="button" data-icon="refresh" data-iconpos="notext">Reiniciar</a>
+           <h1 class="left">DVNotes</h1>
+          <a href="#menu-notes" class="ui-btn-right" data-role="button" data-icon="bars" data-iconpos="notext">Menú</a>
+       </header>
+        <main role="main" >
+            <section class="page ui-content">
+                    <h2 class="center">Hola, <span id="nomb"></span></h2>  
+                <div class="container">  
+                   <div class="row center">
+                    <div class="col-md-12 col-sm-12 col-12 col-xl-12">
+                    <div class="box">
+                    <p>Para cargar una nueva calificación a un alumno, hacé click en "Notas".</p>
+                    <a class="ui-btn ui-btn-icon-left ui-icon-user" onclick="location.href='#notas'">NOTAS</a>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer data-role="footer" data-position="fixed" data-tap-toggle="false" class="ui-bar">
+            <p>&copy; DVNotes - 2020 </p>
+          <a href="#info" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a>
+          <a href="#contacto" class="ui-btn-left" data-role="button" data-icon="mail" data-iconpos="notext">Contacto</a>
+        </footer>
+    </section>
+    
+    <section id="notas" data-role="page" >
+       <header data-role="header" data-position="fixed">
+           <a href="#" class="ui-btn-left" data-role="button" data-icon="back" data-iconpos="notext" onclick="parent.history.back()">Volver</a>
+           <h1>NOTAS</h1>
+          <a href="#menu-notes" class="ui-btn-right" data-role="button" data-icon="bars" data-iconpos="notext">Menú</a>
+       </header>
+        <section role="main">
+              <h2 class="jerarquia">NOTAS</h2>
+            <div class="page ui-content container-fluid">
+               <p class="center">
+                <a href="#carga" class="ui-btn ui-btn-icon-left ui-icon-plus ui-btn-inline">NUEVA</a>
+                <a href="#" id="borrarall" class="ui-btn ui-btn-icon-right ui-icon-delete ui-btn-inline">BORRAR TODAS</a>
+                  </p>
+                <div class="notas-box">
+                    <div class="container-fluid">
+                    <div id="status-body"></div>
+                   <div class="row" id="notas-body">
+                       
+                   </div>
+                    <p id="check"></p>
+                    </div>
+                </div>
+                  <div class="alumnos container-fluid">
+                        <div class="row">
+                        <div class="col-12" id="not-bod">
+                        <input type="search" id="listA" data-theme="b" placeholder="Busqueda rapida.">
+                        <ul data-role="listview" data-filter="true" data-inset="true" id="lista-botones" data-input="#listA">
+                        
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer data-role="footer" data-position="fixed" class="ui-bar" data-tap-toggle="false">
+            <p>&copy; DVNotes - 2020 </p>
+          <a href="#info" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a>
+          <a href="#contacto" class="ui-btn-left" data-role="button" data-icon="mail" data-iconpos="notext">Contacto</a>
+        </footer>
+    </section>
+    <section id="carga" data-role="page" >
+       <header data-role="header">
+           <a href="#" class="ui-btn-left" data-role="button" data-icon="back" data-iconpos="notext" onclick="parent.history.back()">Volver</a>
+           <h1>DVN</h1>
+          <a href="#menu-notes" class="ui-btn-right" data-role="button" data-icon="bars" data-iconpos="notext">Menú</a>
+       </header>
+       <section role="main">
+         <h2 class="jerarquia">Crear nueva nota</h2>
+          <div class="container">
+          <div class="row">
+          <div class="col-12 mt-2">
+           <h2 class="center">CREAR NOTA</h2>
+              <p class="center">Completa el formulario con los datos correspondientes.</p><p class="center mini">Si deja alguna nota vacía, se coloca "Ausente" <br>o equivalente a 0 (cero) por defecto.</p>
+           </div>
+           <div id="status"></div>
+           <form id="form" class="form">
+                  <label for="nombre">Nombre del alumno</label>
+               <input type="text" id="nombre" name="nombre" class="input">
+               <label for="apellido">Apellido del alumno</label>
+               <input type="text" id="apellido" name="apellido" class="input">
+               <label for="comision">Comisión del alumno</label>
+               <input type="text" id="comision" name="Comision" class="input">
+               <label for="notaP1">Nota Parcial 1</label>
+               <input type="number" id="notaP1" name="Nota" class="input">
+               <label for="notaP2">Nota Parcial 2</label>
+               <input type="number" id="notaP2" name="Nota" class="input">
+               <label for="notaTP">Nota Trabajo Práctico</label>
+               <input type="number" id="notaTP" name="Nota" class="input">
+               <label for="notaF">Nota Examen Final</label>
+               <input type="number" id="notaF" name="Nota" class="input">
+               <button class="ui-btn ui-btn-icon-left ui-icon-plus">CREAR</button>
+               
+           </form>
+           </div>
+           </div>
+       </section>
+    </section>
+    
+    <section id="info" data-role="page" >
+       <header data-role="header">
+           <a href="#" class="ui-btn-left" data-role="button" data-icon="back" data-iconpos="notext" onclick="parent.history.back()">Volver</a>
+           <h1>Información</h1>
+          <a href="#menu-notes" class="ui-btn-right" data-role="button" data-icon="bars" data-iconpos="notext">Menú</a>
+       </header>
+       <section role="main">
+         <h2 class="jerarquia">Información TyC + Política de Privacidad</h2>
+          <div class="container">
+          <div class="row">
+           <div class="col-12">
+           <p>Da Vinci Notes, es una aplicación móvil que te brinda el almacenamiento temporal de datos (notas, asistencias) para luego enviarlas a tu correo, compartirlas o simplemente copiarlas a tu portapapeles.</p>
+           <a id="verTOS" class="center ui-btn">Ver Terminos y Condiciones</a><a id="verPP" class="center ui-btn">Ver Política de Privacidad</a>
+            </div>
+           <div class="col-12" id="contenido-tos">
+            </div>
+           <div class="col-12" id="contenido-pp">
+            </div>
+                       <div class="line"></div>
+                       <div class="break"></div>
+            <div class="col-8 offset-2 notas-v">
+                <p class="title-vn">Notas de la Versión 0.02</p>
+                
+                <p class="sub-vn">General</p>
+                <p>Arreglamos varios errores del código HTML.</p>
+                <p class="sub-vn">Sección Notas</p>
+                <p class="new">Hemos agregado que cada alumno pueda tener su nota del examen final.</p>
+                <p>Arreglamos el error que al NO agregar nada en el campo nota, el valor era "undefined". De ahora en más, si no se coloca un valor o el valor es 0 (cero), la nota se tomara automáticamente "Ausente" (AUS).</p>
+                <p class="sub-vn">Sección Menu Desplegable</p>
+                <p>Hicimos unos cambios visuales para mejor comprensión y uso del menú.</p>
+                <p class="title-vn">Notas de la Versión 0.01</p>
+                <p class="sub-vn">Sección Notas</p>
+                <p>Hemos agregado que cada alumno pueda tener promedio de la cursada.</p>
+                <p class="sub-vn">Sección Alerta Bienvenida</p>
+                <p>Arreglamos un error que producía que la app dejase de funcionar al no ingresar un nombre valido en la alerta inicial.</p>
+            </div>
+           </div>
+           </div>
+       </section>
+        <footer data-role="footer" data-position="fixed" data-tap-toggle="false" class="ui-bar">
+            <p>&copy; DVNotes - 2020 </p>
+          <a href="#info" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a>
+          <a href="#contacto" class="ui-btn-left" data-role="button" data-icon="mail" data-iconpos="notext">Contacto</a>
+        </footer>
+    </section>
+    
+    <section id="contacto" data-role="page">
+       <header data-role="header">
+           <a href="#" class="ui-btn-left" data-role="button" data-icon="back" data-iconpos="notext" onclick="parent.history.back()">Volver</a>
+           <h1>DVN</h1>
+          <a href="#menu-notes" class="ui-btn-right" data-role="button" data-icon="bars" data-iconpos="notext">Menú</a>
+       </header>
+       <section role="main">
+         <h2 class="jerarquia">Contacto</h2>
+          <div class="container">
+          <div class="row">
+          <div class="col-12">
+           <h2 class="center">Ponte en contacto</h2>
+           <p class="center">Completa el formulario con los datos correspondientes.</p>
+           </div>
+           <div class="col-12">
+           <div id="statuss"></div>
+           <form id="contactos" class="contact-form">
+                  <label for="nombreContacto">Nombre:</label>
+               <input type="text" id="nombreContacto" name="nombreContacto" class="input">
+               <label for="apellidoContacto">Apellido:</label>
+               <input type="text" id="apellidoContacto" name="apellidoContacto" class="input">
+               <label for="emailContacto">Correo Electronico:</label>
+               <input type="email" id="emailContacto" name="emailContacto" class="input">
+               <label for="celContacto">Tel/Celular:</label>
+               <input type="number" id="celContacto" name="celContacto" class="input">
+               <label for="mensajeContacto">Mensaje:</label>
+               <textarea name="mensajeContacto" id="mensajeContacto" cols="30" rows="10" placeholder="Escribe tu mensaje aqui..."></textarea>
+               <button class="ui-btn ui-btn-icon-left ui-icon-arrow-r">Enviar</button>
+               
+           </form>
+           </div>
+           </div>
+           </div>
+       </section>
+        <footer data-role="footer" data-position="fixed" data-tap-toggle="false" class="ui-bar">
+            <p>&copy; DVNotes - 2020 </p>
+          <a href="#info" class="ui-btn-right" data-role="button" data-icon="info" data-iconpos="notext">Info</a>
+          <a href="#contacto" class="ui-btn-left" data-role="button" data-icon="mail" data-iconpos="notext">Contacto</a>
+        </footer>
+    </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery-confirm.min.js"></script>
+    <script src="js/ajustes.js"></script>
+</body>
+</html>

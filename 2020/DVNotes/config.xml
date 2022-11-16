@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.dvnotes.app"
+    version     = "1.0.0" >
+
+  <name>DaVinci Notes</name>
+  <icon src="icon.png" />  
+  <description>
+      DVNotes es una aplicación que te facilita guardar notas de tus alumnos/as temporalmente para luego poder enviarlas o copiarlas.
+  </description>
+
+  <author href="https://ar.linkedin.com/in/juangidoni" email="juan.gidoni@gmail.com">
+      Juan Ignacio Gidoni
+  </author>
+<preference name="android-minSdkVersion" value="1"/>
+<preference name="android-targetSdkVersion" value="26"/>
+<splash src="splash.png" />
+<splash src="ldpi.png" platform="android" qualifier="ldpi" />
+</widget>
