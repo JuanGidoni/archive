@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> renders correctly and match snapshot 1`] = `
+<ul
+  className="navbar-nav ml-auto"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link "
+      href="/filter/age/a"
+      onClick={[Function]}
+    >
+      Age
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link "
+      href="/filter/weight/a"
+      onClick={[Function]}
+    >
+      Weight
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link "
+      href="/filter/height/a"
+      onClick={[Function]}
+    >
+      Height
+    </a>
+  </li>
+</ul>
+`;

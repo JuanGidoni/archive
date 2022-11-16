@@ -1,0 +1,76 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.text-snol {
+  color: #085394;
+}
+
+.bg-snol {
+  background-color: #085394;
+}
+
+.border-snol {
+  border: 1px solid #085394;
+}
+
+.border-snol-left {
+  border-left: 1px solid #085394;
+}
+
+.border-snol-right {
+  border-right: 1px solid #085394;
+}
+
+.border-snol-top {
+  border-top: 1px solid #085394;
+}
+
+.border-snol-bottom {
+  border-bottom: 1px solid #085394;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.completed {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  display: inline-block;
+}
+.completed:focus {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
